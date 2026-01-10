@@ -6,13 +6,14 @@
 }
 
 :root {
-  /* Primary Colors */
-  --primary-gradient: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
-  --primary-dark: #0284c7;
-  --primary-light: #7dd3fc;
+  /* Primary Colors - Professional Navy & Teal */
+  --primary-gradient: linear-gradient(135deg, #0891b2 0%, #06b6d4 50%, #22d3ee 100%);
+  --primary-dark: #0e7490;
+  --primary-light: #67e8f9;
+  --primary-navy: #0f172a;
 
-  /* Accent Colors */
-  --accent-gradient: linear-gradient(135deg, #f43f5e 0%, #fb7185 100%);
+  /* Accent Colors - Sophisticated Coral */
+  --accent-gradient: linear-gradient(135deg, #f43f5e 0%, #fb7185 50%, #fda4af 100%);
   --accent-coral: #f43f5e;
   --accent-pink: #fb7185;
 
@@ -21,7 +22,7 @@
   --warning: #f59e0b;
   --error: #ef4444;
 
-  /* Neutrals */
+  /* Neutrals - Refined Grays */
   --bg-primary: #ffffff;
   --bg-secondary: #f8fafc;
   --bg-tertiary: #f1f5f9;
@@ -38,11 +39,12 @@
   --dark-text-secondary: #cbd5e1;
   --dark-border: #334155;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  /* Premium Shadows */
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 12px 24px -4px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 24px 48px -12px rgba(0, 0, 0, 0.20);
+  --shadow-2xl: 0 32px 64px -12px rgba(0, 0, 0, 0.25);
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -51,18 +53,20 @@
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
   --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
 
   /* Border Radius */
-  --radius-sm: 0.375rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
   --radius-full: 9999px;
 
   /* Transitions */
-  --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
-  --transition-slow: 350ms ease;
+  --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -496,15 +500,15 @@ body.dark-mode .form-label {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== HERO SECTION - PREMIUM ===== */
 .hero {
-  background: var(--primary-gradient);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0e7490 100%);
   color: white;
-  padding: 3rem 0;
+  padding: 5rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-  min-height: 500px;
+  min-height: 650px;
   display: flex;
   align-items: center;
 }
@@ -516,8 +520,23 @@ body.dark-mode .form-label {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  opacity: 0.3;
+  background-image: url('/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(6, 182, 212, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 70% 50%, rgba(34, 211, 238, 0.15) 0%, transparent 50%);
+  z-index: 0;
 }
 
 .hero-content {
@@ -527,14 +546,22 @@ body.dark-mode .form-label {
 
 .hero h1 {
   color: white;
-  margin-bottom: var(--spacing-md);
-  font-size: 3rem;
+  margin-bottom: var(--spacing-lg);
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .hero p {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   margin-bottom: var(--spacing-xl);
-  opacity: 0.95;
+  opacity: 0.92;
+  font-weight: 400;
+  line-height: 1.7;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ===== FEATURE CARDS ===== */
