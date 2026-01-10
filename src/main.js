@@ -263,6 +263,9 @@ function renderHospitalCard(hospital) {
 
   return `
     <div class="card hospital-card" onclick="window.app.selectHospital(${hospital.id})">
+      <div class="hospital-image" style="width: 100%; height: 180px; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: var(--spacing-md);">
+        <img src="${hospital.image}" alt="${hospital.name}" style="width: 100%; height: 100%; object-fit: cover;" />
+      </div>
       <div class="hospital-header">
         <div>
           <div class="hospital-name">${hospital.name}</div>

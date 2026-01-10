@@ -7,7 +7,8 @@ export const HOSPITALS = [
     specialties: ["General", "Cardiology", "Orthopedic"],
     availableSlots: 15,
     rating: 4.8,
-    distance: "2.3 km"
+    distance: "2.3 km",
+    image: "/hospital-1.png"
   },
   {
     id: 2,
@@ -16,7 +17,8 @@ export const HOSPITALS = [
     specialties: ["General", "Dental", "Cardiology"],
     availableSlots: 8,
     rating: 4.7,
-    distance: "3.1 km"
+    distance: "3.1 km",
+    image: "/hospital-2.png"
   },
   {
     id: 3,
@@ -25,7 +27,8 @@ export const HOSPITALS = [
     specialties: ["Cardiology", "Orthopedic", "Pediatric"],
     availableSlots: 22,
     rating: 4.9,
-    distance: "5.7 km"
+    distance: "5.7 km",
+    image: "/hospital-3.png"
   },
   {
     id: 4,
@@ -34,7 +37,8 @@ export const HOSPITALS = [
     specialties: ["General", "Pediatric", "Dental"],
     availableSlots: 12,
     rating: 4.6,
-    distance: "4.2 km"
+    distance: "4.2 km",
+    image: "/hospital-1.png"
   },
   {
     id: 5,
@@ -43,7 +47,8 @@ export const HOSPITALS = [
     specialties: ["General", "Cardiology", "Orthopedic"],
     availableSlots: 5,
     rating: 4.7,
-    distance: "3.8 km"
+    distance: "3.8 km",
+    image: "/hospital-2.png"
   },
   {
     id: 6,
@@ -52,7 +57,8 @@ export const HOSPITALS = [
     specialties: ["General", "Cardiology", "Pediatric"],
     availableSlots: 18,
     rating: 4.8,
-    distance: "6.5 km"
+    distance: "6.5 km",
+    image: "/hospital-3.png"
   },
   {
     id: 7,
@@ -61,7 +67,8 @@ export const HOSPITALS = [
     specialties: ["Orthopedic", "Dental", "General"],
     availableSlots: 10,
     rating: 4.5,
-    distance: "12.3 km"
+    distance: "12.3 km",
+    image: "/hospital-1.png"
   },
   {
     id: 8,
@@ -70,7 +77,8 @@ export const HOSPITALS = [
     specialties: ["Cardiology", "Orthopedic", "General"],
     availableSlots: 3,
     rating: 4.6,
-    distance: "5.1 km"
+    distance: "5.1 km",
+    image: "/hospital-2.png"
   },
   {
     id: 9,
@@ -79,7 +87,8 @@ export const HOSPITALS = [
     specialties: ["General", "Dental", "Pediatric"],
     availableSlots: 20,
     rating: 4.4,
-    distance: "7.8 km"
+    distance: "7.8 km",
+    image: "/hospital-3.png"
   },
   {
     id: 10,
@@ -88,7 +97,8 @@ export const HOSPITALS = [
     specialties: ["General", "Cardiology", "Dental"],
     availableSlots: 14,
     rating: 4.7,
-    distance: "4.5 km"
+    distance: "4.5 km",
+    image: "/hospital-1.png"
   },
   {
     id: 11,
@@ -97,7 +107,8 @@ export const HOSPITALS = [
     specialties: ["General", "Cardiology"],
     availableSlots: 7,
     rating: 4.9,
-    distance: "6.2 km"
+    distance: "6.2 km",
+    image: "/hospital-2.png"
   },
   {
     id: 12,
@@ -106,7 +117,8 @@ export const HOSPITALS = [
     specialties: ["General", "Pediatric", "Dental"],
     availableSlots: 16,
     rating: 4.5,
-    distance: "2.8 km"
+    distance: "2.8 km",
+    image: "/hospital-3.png"
   }
 ];
 
@@ -123,10 +135,10 @@ export function generateTimeSlots() {
       const period = hour < 12 ? 'AM' : 'PM';
       const displayHour = hour > 12 ? hour - 12 : hour === 0 ? 12 : hour;
       const displayTime = `${displayHour}:${minute.toString().padStart(2, '0')} ${period}`;
-      
+
       // Randomly mark some slots as booked for demo
       const isBooked = Math.random() > 0.7;
-      
+
       slots.push({
         time,
         displayTime,
