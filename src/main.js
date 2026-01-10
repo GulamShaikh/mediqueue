@@ -163,32 +163,32 @@ function renderLandingPage() {
         <h2 class="text-center mb-4">Why Choose MediQueue?</h2>
         <div class="grid grid-3">
           <div class="card feature-card">
-            <div class="feature-icon">⚡</div>
+            <div class="feature-icon"><img src="/icon-quick.png" alt="Quick Booking" /></div>
             <h3>Quick Booking</h3>
             <p class="text-secondary">Book appointments in seconds. No more waiting in long queues.</p>
           </div>
           <div class="card feature-card">
-            <div class="feature-icon">📍</div>
+            <div class="feature-icon"><img src="/icon-nearby.png" alt="Nearby Hospitals" /></div>
             <h3>Nearby Hospitals</h3>
             <p class="text-secondary">Find hospitals and clinics near you with real-time availability.</p>
           </div>
           <div class="card feature-card">
-            <div class="feature-icon">🚑</div>
+            <div class="feature-icon"><img src="/icon-emergency.png" alt="Emergency Services" /></div>
             <h3>Emergency Services</h3>
             <p class="text-secondary">Quick access to ambulance services when you need them most.</p>
           </div>
           <div class="card feature-card">
-            <div class="feature-icon">📱</div>
+            <div class="feature-icon"><img src="/icon-mobile.png" alt="Mobile Friendly" /></div>
             <h3>Mobile Friendly</h3>
             <p class="text-secondary">Access from anywhere, anytime on your mobile device.</p>
           </div>
           <div class="card feature-card">
-            <div class="feature-icon">🔔</div>
+            <div class="feature-icon"><img src="/icon-notifications.png" alt="Smart Notifications" /></div>
             <h3>Smart Notifications</h3>
             <p class="text-secondary">Get reminders for your upcoming appointments.</p>
           </div>
           <div class="card feature-card">
-            <div class="feature-icon">⭐</div>
+            <div class="feature-icon"><img src="/icon-verified.png" alt="Verified Hospitals" /></div>
             <h3>Verified Hospitals</h3>
             <p class="text-secondary">All hospitals are verified and rated by patients.</p>
           </div>
