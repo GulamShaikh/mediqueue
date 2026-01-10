@@ -8,7 +8,7 @@ export const HOSPITALS = [
     availableSlots: 15,
     rating: 4.8,
     distance: "2.3 km",
-    image: "/hospital-1.png"
+    image: "/lilavati.jpg"
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ export const HOSPITALS = [
     availableSlots: 8,
     rating: 4.7,
     distance: "3.1 km",
-    image: "/hospital-2.png"
+    image: "/hinduja.jpg"
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ export const HOSPITALS = [
     availableSlots: 22,
     rating: 4.9,
     distance: "5.7 km",
-    image: "/hospital-3.png"
+    image: "/kokilaben.png"
   },
   {
     id: 4,
