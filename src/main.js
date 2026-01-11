@@ -95,6 +95,8 @@ function renderNavbar() {
           ${mobileMenuOpen ? '✕' : '☰'}
         </button>
         
+        ${mobileMenuOpen ? '<div class="mobile-menu-overlay" onclick="window.app.closeMobileMenu(); window.app.render();"></div>' : ''}
+        
         <div class="nav-links ${mobileMenuOpen ? 'active' : ''}">
           ${isLoggedIn() ? `
             <a class="nav-link ${currentPage === 'dashboard' ? 'active' : ''}" onclick="window.app.navigateTo('dashboard')">Dashboard</a>
