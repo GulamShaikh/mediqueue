@@ -237,20 +237,24 @@ body.dark-mode .mobile-menu-btn {
 @media (max-width: 768px) {
   .mobile-menu-btn {
     display: block;
+    z-index: 1001;
   }
 
   .nav-links {
     position: fixed;
     top: 60px;
     right: -100%;
-    width: 250px;
+    width: 280px;
+    max-width: 80vw;
     height: calc(100vh - 60px);
     background: var(--bg-primary);
     flex-direction: column;
     align-items: flex-start;
     padding: var(--spacing-xl);
-    box-shadow: var(--shadow-xl);
+    box-shadow: var(--shadow-2xl);
     transition: right var(--transition-base);
+    z-index: 1000;
+    overflow-y: auto;
   }
 
   body.dark-mode .nav-links {
@@ -259,6 +263,18 @@ body.dark-mode .mobile-menu-btn {
 
   .nav-links.active {
     right: 0;
+  }
+
+  /* Mobile menu backdrop */
+  .nav-links.active::before {
+    content: '';
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
   }
 }
 

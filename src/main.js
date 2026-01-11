@@ -36,8 +36,8 @@ function handleHashChange() {
 function navigateTo(page) {
   currentPage = page;
   window.location.hash = page;
+  closeMobileMenu(); // Always close menu on navigation
   render();
-  closeMobileMenu();
 }
 
 // Toggle mobile menu
@@ -47,7 +47,9 @@ function toggleMobileMenu() {
 }
 
 function closeMobileMenu() {
-  mobileMenuOpen = false;
+  if (mobileMenuOpen) {
+    mobileMenuOpen = false;
+  }
 }
 
 // Toggle dark mode
