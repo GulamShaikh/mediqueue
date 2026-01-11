@@ -746,7 +746,7 @@ function renderFooter() {
         </div>
         
         <div class="footer-bottom">
-          <p>&copy; ${currentYear} MediQueue. All rights reserved.</p>
+          <p>&copy; ${currentYear} MediQueue by GD. All rights reserved.</p>
           <p>Made with ❤️ for better healthcare access</p>
         </div>
       </div>
