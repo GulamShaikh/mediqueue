@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Handle hash changes
 function handleHashChange() {
   const hash = window.location.hash.slice(1);
+  mobileMenuOpen = false; // Always close menu on hash change
   if (hash) {
     navigateTo(hash);
   }
