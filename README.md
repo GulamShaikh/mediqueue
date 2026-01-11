@@ -4,7 +4,7 @@ A modern, mobile-responsive web application for efficient hospital queue managem
 
 ## 🚀 Live Demo
 
-**Deployed URL**: [Coming soon - Deploy via Vercel]
+**Deployed URL**: https://mediqueues.vercel.app
 
 **Demo Credentials**:
 - Email: `demo@mediqueue.com`
@@ -12,12 +12,14 @@ A modern, mobile-responsive web application for efficient hospital queue managem
 
 ## ✨ Features
 
-- 🏥 **Hospital Search**: Find 12+ verified hospitals in Mumbai
+- 🏥 **Hospital Search**: Find 12+ verified hospitals in Mumbai with real photos
 - 🔍 **Smart Filters**: Search by name, location, or specialty
 - 📅 **Easy Booking**: Visual time slot selection (9 AM - 8 PM)
 - 📱 **Mobile Responsive**: Perfect on phones, tablets, and desktop
 - 🚑 **Emergency Services**: Quick access to ambulance contacts
 - 🌙 **Dark Mode**: Eye-friendly theme toggle
+- 🎨 **Professional Design**: Premium UI with hospital images and icons
+- 📍 **Footer Navigation**: Quick links and emergency contacts
 - ⚡ **Fast & Lightweight**: No backend needed, runs on localStorage
 
 ## 🛠️ Tech Stack
@@ -32,7 +34,7 @@ A modern, mobile-responsive web application for efficient hospital queue managem
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/mediqueue.git
+git clone https://github.com/GulamShaikh/mediqueue.git
 cd mediqueue
 
 # Install dependencies

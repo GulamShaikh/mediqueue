@@ -69,11 +69,15 @@ function render() {
   const app = document.getElementById('app');
 
   if (currentPage === 'landing') {
-    app.innerHTML = renderLandingPage();
+    app.innerHTML = `
+      ${renderLandingPage()}
+      ${renderFooter()}
+    `;
   } else {
     app.innerHTML = `
       ${renderNavbar()}
       ${renderPageContent()}
+      ${renderFooter()}
     `;
   }
 
@@ -687,8 +691,68 @@ window.app = {
   showAuthModal,
   closeModal,
   handleAuth,
-  handleModalConfirm
+  handleModalConfirm,
+  closeMobileMenu
 };
+
+
+// Render Footer
+function renderFooter() {
+  const currentYear = new Date().getFullYear();
+  return `
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <img src="/logo.png" alt="MediQueue" style="width: 32px; height: 32px;" />
+              <span>MediQueue</span>
+            </div>
+            <p class="footer-description">Smart hospital queue management system for booking appointments and managing healthcare visits in Mumbai.</p>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a onclick="window.app.navigateTo('${isLoggedIn() ? 'dashboard' : 'landing'}')">Home</a></li>
+              ${isLoggedIn() ? `
+                <li><a onclick="window.app.navigateTo('dashboard')">Find Hospitals</a></li>
+                <li><a onclick="window.app.navigateTo('appointments')">My Appointments</a></li>
+                <li><a onclick="window.app.navigateTo('ambulance')">Emergency Services</a></li>
+              ` : `
+                <li><a onclick="window.app.showAuthModal('login')">Login</a></li>
+                <li><a onclick="window.app.showAuthModal('signup')">Sign Up</a></li>
+              `}
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <ul class="footer-links">
+              <li>📧 support@mediqueue.com</li>
+              <li>📞 +91-22-12345678</li>
+              <li>📍 Mumbai, Maharashtra</li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Emergency</h4>
+            <ul class="footer-links">
+              <li>🚑 Ambulance: 102</li>
+              <li>🏥 Emergency: 108</li>
+              <li>⚕️ Medical Helpline: 104</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; ${currentYear} MediQueue. All rights reserved.</p>
+          <p>Made with ❤️ for better healthcare access</p>
+        </div>
+      </div>
+    </footer>
+  `;
+}
 
 // Initial render
 render();
